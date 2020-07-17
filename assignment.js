@@ -10,6 +10,7 @@ console.log(result);
 
 
 
+
 //woodCalculator is here--
 function woodCalculator(chair, table, bed){
     var totalWoodForChair = chair * 1;
@@ -21,6 +22,7 @@ function woodCalculator(chair, table, bed){
 
 var result = woodCalculator(10, 5, 3);
 console.log(result);
+
 
 
 
@@ -51,15 +53,19 @@ console.log(brickCalculator(25));
 
 
 
+
 //tinyFriend is here
 
-function tinyFriend(str_ara) {
-    var min = str_ara[0].length;
-    str_ara.map(v => min = Math.min(min, v.length));
-    result = str_ara.filter(v => v.length == min);
-    return result;
-  }
-  
-  console.log(tinyFriend(['rahim', 'karim', 'riaz','mim','aaaa']));
+function tinyFriend(names){
+    var tiny = names[0];
+    for( var i = 0; i<names.length; i++ ){
+        var element = names[i];
+        if(element.length<tiny.length){
+            tiny = element;
+        }
+    }
+    return tiny;
+}
 
-  
+var result = tinyFriend(['riaz', 'ria', 'az', 'a']);
+console.log(result);
